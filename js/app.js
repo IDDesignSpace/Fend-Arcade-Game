@@ -1,3 +1,13 @@
+
+/* Ian's comment- This is the third project for Udacity's FEND course. 
+ * The goal is utilized the prewritten files in order to create a frogger game.
+ * Tasks in order of importance:
+ *  1. Read over project files
+ *  2. Make notes in order to understand pre-written files
+ *  3. Figure out starting point
+ *   
+*/
+
 // Enemies our player must avoid
 var Enemy = function() {
     // Variables applied to each of our instances go here,
@@ -25,10 +35,40 @@ Enemy.prototype.render = function() {
 // This class requires an update(), render() and
 // a handleInput() method.
 
+//  Ian's comment- creates player
+var Player = function() {
+    this.sprite = 'images/char-boy.png'
+
+}
+
+//  Ian's comment- Update the player's
+Player.prototype.update = function(dt) {
+
+};
+
+//  Ian's comment- Draw the player on the screen, required for game play
+
+Player.prototype.render = function () {
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+};
+
+
+
+
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
+
+
+
+var 
+    enemy1 = new Enemy(), 
+    enemy2 = new Enemy();
+
+var allEnemies = [enemy1,enemy2 ];
+
+var player = new Player();
 
 
 
@@ -45,4 +85,3 @@ document.addEventListener('keyup', function(e) {
     player.handleInput(allowedKeys[e.keyCode]);
 });
 
-Enemy.render();
