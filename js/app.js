@@ -45,7 +45,7 @@ Enemy.prototype.render = function() {
 // a handleInput() method.
 
 
-//  Ian's comment- creates player
+//  Ian's comment- creates player object and assigns initial x,y coordinates and 
 var Player = function(x,y,speed) {
     this.sprite = 'images/char-boy.png';
     this.x = x;
@@ -53,8 +53,10 @@ var Player = function(x,y,speed) {
     this.speed = speed;
 }
 
-//  Ian's comment- Update the player's
+//  Ian's comment- Update the player's information over and over again is called in the updateEntities function
 Player.prototype.update = function(dt) {
+
+    //  
 
     
 };
@@ -67,20 +69,19 @@ Player.prototype.render = function () {
 
 Player.prototype.handleInput = function(keypress) {
 
-    // This switch statement handles the key press in order to move the figure across the screen 
+    // Ian's comment- This switch statement handles the key press in order to move the figure across the screen
     switch (keypress) {
-
         case 'left': 
-        this.x -= 30;
+        this.x -=  50 + this.speed;
         break;
         case 'up': 
-        this.y -= 50;
+        this.y -= 30 + this.speed;
         break;
         case 'right': 
-        this.x += 50;
+        this.x += 50 + this.speed;
         break;
         case 'down': 
-        this.y += 50;
+        this.y += 30 + this.speed;
         break;
     }
 
@@ -91,7 +92,8 @@ Player.prototype.handleInput = function(keypress) {
 // Place the player object in a variable called player
 
 var allEnemies = [];
-var player = new Player(280,300,50);
+
+var player = new Player(200,380,50);
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
@@ -106,3 +108,8 @@ document.addEventListener('keyup', function(e) {
     player.handleInput(allowedKeys[e.keyCode]);
 });
 
+// Ian's comment- This for loop creates 5 new Enemy Objects and adds them to the allEnemies array 
+var numEnemies = 5;
+for(var i = 0;i < numEnemies; i++) {
+    allEnemies.push(new Enemy());
+}
