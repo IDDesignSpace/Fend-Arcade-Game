@@ -65,7 +65,24 @@ Player.prototype.render = function () {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-Player.prototype.handleInput = function(e) {
+Player.prototype.handleInput = function(keypress) {
+
+    // This switch statement handles the key press in order to move the figure across the screen 
+    switch (keypress) {
+
+        case 'left': 
+        this.x -= 30;
+        break;
+        case 'up': 
+        this.y -= 50;
+        break;
+        case 'right': 
+        this.x += 50;
+        break;
+        case 'down': 
+        this.y += 50;
+        break;
+    }
 
 }
 
@@ -74,7 +91,7 @@ Player.prototype.handleInput = function(e) {
 // Place the player object in a variable called player
 
 var allEnemies = [];
-var player = new Player();
+var player = new Player(280,300,50);
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
