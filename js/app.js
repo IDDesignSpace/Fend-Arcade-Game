@@ -6,7 +6,7 @@
  *  2. Make notes in order to understand pre-written files
  *  3. Figure out starting point
  *  4. Starting point was to instantiate new Player Class and to add update and render functionality to the prototype, create allEnemy array and instantiate new Player object within player.
- *  5. 
+ * 
  *   
 */
 
@@ -69,7 +69,7 @@ Enemy.prototype.render = function() {
 // Ian's comment- 
 Enemy.prototype.randomSpeed = function() {
     var randomNum = Math.floor(Math.random() * (10 - 5) + 1);
-    this.speed = 50 * randomNum;  
+    this.speed = 75 * randomNum;  
 }
 
 
@@ -132,6 +132,10 @@ Player.prototype.render = function () {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
+
+
+
+// Ian's comment - This method handles the movement of the player based on which of the arrow keys is placed
 Player.prototype.handleInput = function(keypress) {
 
     // Ian's comment- This switch statement handles the key press in order to move the figure across the screen, it also sets the limits of the player. If a player reaches the end of the board the players coordinate will no longer be incremented in that direction. If the player reaches the water a function is called and the player has completed the round.
@@ -145,7 +149,7 @@ Player.prototype.handleInput = function(keypress) {
         break;
         case 'up': 
         if (this.y === -20) {
-            playerWins();
+            player.endRound();
         } else {
         this.y -= 30 + this.speed;
         } 
@@ -167,6 +171,13 @@ Player.prototype.handleInput = function(keypress) {
     }
 
 }
+
+// Ian's comment- This method handles what happens if the player  succesfully makes it to the water, without colligin and the round has ended.
+Player.prototype.endRound = function () {
+    
+        player.x = 200;
+        player.y = 380;
+} 
 
 
 // This listens for key presses and sends the keys to your
