@@ -32,6 +32,7 @@ Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
+    console.log(dt);
 
 };
 
@@ -56,7 +57,7 @@ var Player = function(x,y,speed) {
 //  Ian's comment- Update the player's information over and over again is called in the updateEntities function
 Player.prototype.update = function(dt) {
 
-    //  
+    console.log(dt);
 
     
 };
