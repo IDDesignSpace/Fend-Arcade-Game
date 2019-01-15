@@ -41,6 +41,6 @@ The goal of the Arcade Game Clone is to move our Bugboy character from the grass
 
 ## Acknowledgements
 
--[Adding Collision Detection to the HTML Canvas](https://stackoverflow.com/questions/13916966/adding-collision-detection-to-images-drawn-on-canvas)
--[Starter Project Files](https://github.com/udacity/frontend-nanodegree-arcade-game)
+- [Adding Collision Detection to the HTML Canvas](https://stackoverflow.com/questions/13916966/adding-collision-detection-to-images-drawn-on-canvas)
+- [Starter Project Files](https://github.com/udacity/frontend-nanodegree-arcade-game)
 
