@@ -21,9 +21,9 @@ The game can be played via GitHub Pages at [FEND Arcade Game Clone](https://idde
 
 or the game can be played locally by downloading or cloning the project from my [GitHub Repo](https://github.com/IDDesignSpace/Fend-Arcade-Game):
 
-- **Download:**click the "clone or download" button and then click the "Download zip" option. Once the game has finished downloading, unzip the file and then open index.html in the browser of your choice.
+- **Download:** click the "clone or download" button and then click the "Download zip" option. Once the game has finished downloading, unzip the file and then open index.html in the browser of your choice.
 
-- **Clone:** Type into your terminal or command prompt the following ``$ git clone https://github.com/IDDesignSpace/Fend-Arcade-Game.git`. Once the game has finished cloning to your local repository, open index.html in the browser of your choice.
+- **Clone:** Type into your terminal or command prompt the following `$ git clone https://github.com/IDDesignSpace/Fend-Arcade-Game.git`. Once the game has finished cloning to your local repository, open index.html in the browser of your choice.
 
 ## Game Play
 
