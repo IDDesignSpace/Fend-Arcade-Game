@@ -57,6 +57,16 @@ Enemy.prototype.update = function(dt) {
 
     // console.log(`Enemys time is ${dt}`);
 
+    // Ian's comment - This sets up collision detection for the enemy LadyBugs and the player
+    for (enemy of allEnemies) {
+    if (player.x < enemy.x + 60 &&
+        player.x + 30 > enemy.x &&
+        player.y < enemy.y + 25 &&
+        player.y + 30 > enemy.y) {
+            player.endRound();
+          
+        }
+    }
 
 
 };
