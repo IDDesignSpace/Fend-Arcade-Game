@@ -30,10 +30,10 @@ or the game can be played locally by downloading or cloning the project from my 
 The goal of the Arcade Game Clone is to move our Bugboy character from the grassy rectangles across the stony paths to the water without being struck by one of the enemy Ladybugs. After crossing three times without being struck you **win**! 
 
 ## Controls
--**Left** &larr;  to move Bugboy left
--**Up** &uarr; to move Bugboy up
--**Down** &darr;  to move Bugboy down
--**Right** &rarr;  to move Bugboy right
+- **Left** &larr;  to move Bugboy left
+- **Up** &uarr; to move Bugboy up
+- **Down** &darr;  to move Bugboy down
+- **Right** &rarr;  to move Bugboy right
 
 ## Author
 
