@@ -141,7 +141,7 @@ Player.prototype.handleInput = function(keypress) {
 Player.prototype.endRound = function () {
         player.x = 200;
         player.y = 380;
-        playerWins();
+        checkScore();
 } 
 
 
