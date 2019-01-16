@@ -1,16 +1,5 @@
 
-/* Ian's comment- This is the third project for Udacity's FEND course. 
- * The goal is utilized the prewritten files in order to create a frogger game.
- * Tasks in order of importance:
- *  1. Read over project files
- *  2. Make notes in order to understand pre-written files
- *  3. Figure out starting point
- *  4. Starting point was to instantiate new Player Class and to add update and render functionality to the prototype, create allEnemy array and instantiate new Player object within player.
- * 
- *   
-*/
-
-
+/* Ian's comment- This is the third project for Udacity's FEND course. */
 
 // Ian's comment- This begins the functionality for the enemy 
 // Enemies our player must avoid
@@ -82,34 +71,6 @@ Enemy.prototype.randomSpeed = function() {
     this.speed = 75 * randomNum;  
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
@@ -127,12 +88,6 @@ var Player = function(x,y,speed) {
 
 //  Ian's comment- Update the player's information over and over again is called in the updateEntities function
 Player.prototype.update = function(dt) {
-
-    // console.log(dt);
-
-    // Ian's comment- Three rows of ladybug enemies generated
-
-
     
 };
 
@@ -184,9 +139,9 @@ Player.prototype.handleInput = function(keypress) {
 
 // Ian's comment- This method handles what happens if the player  succesfully makes it to the water, without colligin and the round has ended.
 Player.prototype.endRound = function () {
-    
         player.x = 200;
         player.y = 380;
+        playerWins();
 } 
 
 
@@ -203,9 +158,6 @@ document.addEventListener('keyup', function(e) {
     player.handleInput(allowedKeys[e.keyCode]);
 });
 
-
-
-
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
@@ -216,7 +168,7 @@ var enemyCoordinates = [60, 145, 225];
 
 var player = new Player(200, 380, 50);
 
-
+var score = 0;
 
 // Ian's comment- This for loop creates 3 new Enemy Objects and adds them to the allEnemies array 
 var numEnemies = 3;
@@ -228,3 +180,12 @@ for(var i = 0;i < numEnemies; i++) {
 }
 
 // Ian's comment- I need to create a random number generator
+
+function checkScore() {
+    if (score === 3) {
+        console.log("Player Wins!");
+        score = 0;
+    } else {
+        score++;
+    }
+}
